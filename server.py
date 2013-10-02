@@ -1,5 +1,6 @@
-from bottle import Bottle, route, run, template
+from bottle import Bottle, route, run, template, static_file
 import textile
+import string
 
 app=Bottle()
 
@@ -12,13 +13,21 @@ def readFile(file):
 
 
 @app.route('/')
-@app.route('/<page>')
+@app.route('/p/<page:path>')
 def index(page='index'):
-	mytemplate = readFile('template/index.html')
+	mytemplate = readFile('template/main.html')
 	if(page!='favicon.ico'):
 		mypage = readFile('pages/'+page+'.textile')
 		txpage = textile.textile(mypage)
-		print txpage
-	return template(mytemplate,page=txpage, page_title=page)
+
+	return  template(
+			mytemplate,
+			page=''+txpage, 
+			page_title=page)
+
+
+@app.route('/public/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='public/' )
 
 run(app, host='localhost', port=8080, reloader=True)

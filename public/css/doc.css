@@ -1,0 +1,330 @@
+aside{
+	float:left;
+	width:200px;
+	padding:20px;
+	margin:0px;
+	background-color:#ddd;
+}
+.thumbnail {
+	padding:10px;
+	margin:10px;
+	background-color: #eee;
+}
+.mini {
+	width:160px;
+}
+.medium {
+	width:320px;
+}
+.big {
+	width:640px;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+/**
+ * Modificaiton du titre de l'article.
+ */
+header {
+	/*background-color:#eee;*/
+	background-position:0px 0px;
+	background-image: url('../illustrations/wordpress-header-mcgivrer.jpg');
+	background-repeat: no-repeat;
+	background-size: 120%;
+	border-bottom:1px solid #666;
+}
+header h1 {
+	font-size: 60px;
+	padding:10px 20px;
+	color:#fff;
+	text-shadow:2px 2px 4px #000,-2px 2px 4px #000,2px -2px 4px #000,-2px -2px 4px #000;
+}
+header p.version{
+	float:right;
+	padding:5px 10px;
+	margin:10px;
+	margin-top:40px;
+	font-size:10pt;
+	color:#ccc;
+	background-color:#777;
+}
+header nav {
+	background-color:#333;
+	padding:4px 8px;
+}
+header nav ul li:before {
+	content: " » ";
+	color:#777;
+}
+header nav ul li a {
+	color:#fff;
+	text-decoration: none;
+}
+footer {
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	border-top:1px solid #666;
+	background-color: #000;
+	color:#fff;
+	font-size:8pt;
+	text-align:center;
+}
+footer p {
+	padding:10px;
+}
+
+code {
+	border: none;
+	background-color: transparent;
+}
+
+/**
+ * Document Title and Subtitle
+ */
+p.title {
+	font-size: 24pt;
+	font-weight: bold;
+	padding:5px;
+	margin:0px;
+}
+
+p.subtitle {
+	font-size: 18pt;
+	font-weight: bold;
+	padding:5px;
+	margin:0px;
+}
+/**
+ * Code samples.
+ */
+pre {
+	margin: 4%;
+}
+
+pre.xml {
+	border: 1px solid #363;
+	border-left: 6px solid #363;
+	background-color: #efe;
+	margin: 4%;
+	margin-bottom: 5px;
+}
+
+pre.diagram {
+	width: *;
+	background-color: #fff;
+	box-shadow: 4px 4px 8px #666;
+	font-size: 9pt;
+	padding: 2%;
+	margin: 4%;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+pre.java {
+	border: 1px solid #336;
+	border-left: 6px solid #336;
+	background-color: #eef;
+	margin: 4%;
+	margin-bottom: 5px;
+}
+
+pre.properties {
+	border: 1px solid #663;
+	border-left: 6px solid #663;
+	background-color: #ffe;
+	margin: 4%;
+	margin-bottom: 5px;
+}
+
+pre.console {
+	border: 1px solid #666;
+	background-color: #000;
+	color: #fff;
+	margin: 4%;
+	margin-bottom: 5px;
+}
+
+/**
+ * NumÃ©rotation des titres et figures
+ */
+body {
+	text-align: justify;
+	counter-reset: figures 0 section 0 subsection 1 composite 1 detail 1;
+	padding-bottom:60px;
+}
+
+.container {
+	margin-left:240px;
+	border-left:1px solid #666;
+}
+#markup article {
+	margin: 0px;
+	padding: 10px;	
+}
+.markdown-body h1 {
+	counter-reset: subsection;
+	font-size: 18pt;
+}
+
+.markdown-body h2 {
+	counter-reset: composite;
+	font-size: 16pt;
+}
+
+.markdown-body h3 {
+	counter-reset: detail;
+	font-size: 14pt;
+}
+
+.markdown-body h4 {
+	font-size: 12pt;
+}
+/* Update H1 counter*/
+.markdown-body h1:before {
+	counter-increment: section;
+	content: counter(section) ". ";
+}
+/* update H2 counter*/
+.markdown-body h2:before {
+	counter-increment: subsection;
+	content: counter(section) "." counter(subsection) ". ";
+}
+/* update H3 counter*/
+.markdown-body h3:before {
+	counter-increment: composite;
+	content: counter(section) "." counter(subsection) "." counter(composite)
+		". ";
+}
+/* update H4 */
+.markdown-body h4:before {
+	counter-increment: detail;
+	content: counter(section) "." counter(subsection) "." counter(composite)
+		"." counter(detail) ". ";
+}
+/* set H5 mark*/
+.markdown-body h5:before {
+	content: " » ";
+}
+/*
+ * define a legend for a figure.
+ */
+.figure {
+	text-align: center;
+	font-size: 8pt;
+}
+
+.figure:before {
+	counter-increment: figures;
+	content: "figure " counter(section) "." counter(figures) " - ";
+}
+
+/* 
+ * Extrait de code et commandes shell
+ */
+pre {
+	margin-left: 24px;
+}
+
+pre.shell {
+	background-color: #000;
+	color: #fff;
+	border: none;
+}
+
+pre.javascript {
+	border-left-size: 4px;
+}
+
+/**
+ * Mise en valeur des notes/remarque, info et warning
+ */
+blockquote.info,blockquote.trick,blockquote.alert,blockquote.comment {
+	padding: 8px 4px;
+	padding-left: 48px;
+	border-radius: 8px;
+	box-shadow: 4px 4px 8px #333;
+	border: 0px;
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+	color: black;
+	margin: 1em 5em;
+}
+
+blockquote p {
+	display: block;
+	padding-left: 10px;
+	padding-right: 48px;
+	margin-left: 10px;
+	border-left: 1px dotted black;
+	text-align: justify;
+}
+
+/* 
+ * NumÃ©rotation des notes
+ */
+blockquote:before {
+	counter-increment: notes;
+	content: "#" counter(notes);
+	font-size: 8pt;
+	background-color: #000;
+	color: #fff;
+	border-radius: 8pt;
+	float: right;
+	padding: 2px;
+	margin-right: 8px;
+	text-align: center;
+	width: 20px;
+	font-style: italic;
+}
+
+blockquote p b {
+	color: black;
+}
+
+blockquote.info {
+	background-color: #cef;
+	background-image: url("../illustrations/icons/info.png");
+}
+
+blockquote.info p:before {
+	color: #cef;
+}
+
+blockquote.trick {
+	background-color: #cfe;
+	background-image: url("../illustrations/icons/ok.png");
+}
+
+blockquote.trick p:before {
+	color: #cfe;
+}
+
+blockquote.alert {
+	background-color: #f99;
+	background-image: url("../illustrations/icons/alert.png");
+}
+
+blockquote.alert p:before {
+	color: #f99;
+}
+
+blockquote.comment {
+	background-color: #ffe;
+	background-image: url("../illustrations/icons/comment.png");
+}
+
+blockquote.comment p:before {
+	color: #ffe;
+}
+
+blockquote code {
+	background-color: transparent;
+	color: #000;
+	font-weight: bold;
+	font-style: italic;
+	border: 0px;
+}

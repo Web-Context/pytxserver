@@ -1,8 +1,20 @@
 h1. test
 
-h2. test
+h2. test 1
+
+go to "page 1":/p/page1
 
 
-!{width:250px}images/test.png!
+h2. test 2
 
-p(figure). this is a figure
+!(thumbnail mini right)public/illustrations/test.png(this is a sample picture)! 
+
+p. Lorem ipsum Occaecat dolor eiusmod esse exercitation reprehenderit dolor Ut labore eiusmod quis esse quis quis ullamco elit id fugiat non in minim amet do anim eu cupidatat fugiat magna sit voluptate magna ea voluptate pariatur reprehenderit aute enim adipisicing ullamco magna culpa aliqua aliquip laboris cillum in proident dolore dolor quis Ut ut veniam ut consequat dolor esse qui aute nisi est aliquip et pariatur culpa fugiat qui anim Duis mollit quis dolor consequat Excepteur occaecat elit nostrud eu Duis aliqua adipisicing ullamco minim ex ad anim fugiat ex quis non ex ullamco veniam sed in est enim et nulla ea labore ad anim commodo ad aliqua anim pariatur occaecat aliqua dolor est proident culpa amet dolore qui nostrud nulla enim veniam consequat commodo mollit dolore non et aute eu tempor quis id laboris minim aute ad officia ea tempor in incididunt ad dolore sit in commodo eu dolore non sed deserunt ex velit elit sed amet enim dolore occaecat do sit in sint dolor sunt anim labore anim fugiat voluptate.
+
+h2. test 3
+
+p. Lorem ipsum Occaecat dolor eiusmod esse exercitation reprehenderit dolor Ut labore eiusmod quis esse quis quis ullamco elit id fugiat non in minim amet do anim eu cupidatat fugiat magna sit voluptate magna ea voluptate pariatur reprehenderit aute enim adipisicing ullamco magna culpa aliqua aliquip laboris cillum in proident dolore dolor quis Ut ut veniam ut consequat dolor esse qui aute nisi est aliquip et pariatur culpa fugiat qui anim Duis mollit quis dolor consequat Excepteur occaecat elit nostrud eu Duis aliqua adipisicing 
+
+bq(info). Fugiat qui anim Duis mollit quis dolor consequat Excepteur occaecat elit nostrud eu Duis aliqua adipisicing ullamco minim ex ad anim fugiat ex quis non ex ullamco veniam sed in est enim et nulla ea labore ad anim commodo ad aliqua anim pariatur occaecat aliqua dolor est proident culpa amet dolore qui nostrud nulla enim veniam consequat commodo mollit dolore non et aute eu tempor quis id laboris minim aute ad officia ea tempor in incididunt ad dolore sit in commodo eu dolore non sed deserunt ex velit elit sed amet enim dolore occaecat do sit in sint dolor sunt anim labore anim fugiat voluptate.
+
+p. Lorem ipsum Occaecat dolor eiusmod esse exercitation reprehenderit dolor Ut labore eiusmod quis esse quis quis ullamco elit id fugiat non in minim amet do anim eu cupidatat fugiat magna sit voluptate magna ea voluptate pariatur reprehenderit aute enim adipisicing ullamco magna culpa aliqua aliquip laboris cillum in proident dolore dolor quis Ut ut veniam ut consequat dolor esse qui aute nisi est aliquip et pariatur culpa fugiat qui anim Duis mollit quis dolor consequat Excepteur occaecat elit nostrud eu Duis aliqua adipisicing 
