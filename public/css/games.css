@@ -1,0 +1,192 @@
+games.css
+/**
+* games.css
+* A sample css piece of code to design a simple "Game Test Sheet.
+* @author Frédéric Delorme <frederic.delorme@gmail.com>
+*/
+/* latin-ext */
+@font-face {
+	font-family: 'Righteous';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Righteous'), local('Righteous-Regular'), url(https://fonts.gstatic.com/s/righteous/v5/eJYqrhUff1n1Ge9A-rSw_BJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+	font-family: 'Righteous';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Righteous'), local('Righteous-Regular'), url(https://fonts.gstatic.com/s/righteous/v5/w5P-SI7QJQSDqB3GziL8XRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+header {
+display:block;
+font-family: Righteous;
+color:black;
+border-bottom:1px dotted black;
+}
+
+.clear {
+	clear:both;
+}
+div.content{
+	margin:0% 15%;
+	width:70%;
+}
+article.game {
+	font-family: Arial;
+	padding: 2% 4%;
+	width:100%;
+}
+article.game img.cover {
+	float: left;
+	border: 4px solid #ddd;
+	margin: 10px 10px 10px 0px;
+	width:160px;
+	height:240px;
+}
+article.game div.header {
+	background-color: #eee;
+	padding: 5px 10px;
+	border: 1px solid #aaa;
+	min-height:120px;
+}
+article.game div.header p{
+	font-style: italic;
+}
+article.game h1,
+article.game h2,
+article.game div.note{
+
+	font-family: Righteous;
+	font-variant: normal;
+}
+article.game h1:before,
+article.game h2:before {
+	content:"";
+}
+article.game h1 {
+	font-size: 24pt;
+	padding:0px;
+	margin:0px;
+}
+article.game h2{
+	font-size: 18pt;
+}
+article.game div.header > *{
+	margin-left:180px;
+}
+article.game div.header ul.tags{
+	float:right;
+	margin:0px; padding:0px;
+	list-style: none;
+}
+article.game ul.tags li { 
+	margin:0px; padding:0px;
+	display:inline-block;
+}
+article.game ul.tags li a{ 
+	margin:0px; padding:0px;
+	text-decoration: none;
+	color:#666;
+	padding:2px 4px;
+	border-left:1px dotted #666;
+}
+article.game ul.tags li:first-child a{ 
+	border-left:none;
+}
+article.game div.header img.cover{
+	margin-left:0px;
+}
+article.game div, 
+article.game p{
+	text-align: justify;
+}
+article.game .header .rates {
+	font-family: monospace;
+	font-size: 14pt;
+	padding: 10px 0px;
+	margin: 10px 0px 10px 180px;
+	border-top: 1px dotted #000;
+	border-bottom: 1px dotted #000;
+	text-align: center;
+	font-style: normal;
+}
+article.game div.header p.platforms {
+	text-align:left;
+	font-size:10pt;
+	border-top:1px dotted #666;
+	font-family:courier;
+	padding-top:4px;
+}
+article.game div.header p.author {
+	text-align:right;
+	font-size:10pt;
+	padding-top:4px;
+}
+article.game div.body {
+	padding:10px 0px;
+}
+article.game div.note {
+	float: right;
+	font-size: 42pt;
+	margin:10px 0px;
+	background-color:#000;
+	color:#fff;
+	padding:4px;
+}
+article.game div.swing {
+	padding:10px 20px;
+	margin:0px;
+	padding:0px;
+}
+article.game div.swing div.pad {
+	width:44%;
+	padding:5px 10px;
+	margin-bottom:2%;
+	min-height:11em;
+	margin-top:20px;
+}
+article.game div.swing div.pad h2{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	font-size:24pt;
+}
+article.game div.swing div.pad h2:before{
+	content:"";
+}
+article.game div.swing div.plus {
+	float:left;
+	color:green;
+	background-color:lightgreen;
+	border-right:1px dotted #666;
+}
+article.game div.swing div.plus h2{
+	position:relative;
+	top:-16px;
+	left:-16px;	
+	background-color:green;
+	color:lightgreen;
+	border-color:green;
+	width:1.2em;
+	clear:right;
+}
+article.game div.swing div.minus {
+	float:right;
+	color:red;
+	background-color:#faa;
+	border-color:green;
+}
+article.game div.swing div.minus h2{
+	position:relative;
+	top:-16px;
+	left:-16px;	
+	background-color:red;
+	color:#faa;
+	border-color:red;
+	width:1.2em;
+	clear:right;
+}
