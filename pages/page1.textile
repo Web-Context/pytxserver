@@ -1,3 +1,10 @@
-h1. Page01
+h1. Video Games
 
-go back to "index":/
+you'll find a lots of test about video games here !
+
+h2. X360
+
+* "Watch_Dogs":/game/0
+* "Tomb Raider":/game/1
+
+go back to "home":/

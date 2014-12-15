@@ -1,11 +1,9 @@
-from bottle import route, view, request, response, run, abort, template, static_file
+from bottle import TEMPLATES, route, view, request, response, run, abort, static_file
 import textile
-import string
 import json
 from collections import namedtuple
-from fileinput import filename
 
-language = 'en' 
+language = 'en'
 
 def convertRate(rate):
 	rate = rate/4
@@ -35,6 +33,11 @@ def readFile(filename):
 	f.close()
 	return fcontent
 
+
+@route("/clear/cache")
+def clearCache():
+	TEMPLATES.clear();
+
 # Show a specific public 
 # resource like css, js, jpg, png.
 @route('/public/<filepath:path>')
@@ -50,15 +53,18 @@ def server_static(filepath):
 def index(page='index'):
 	presetHeader(request,response)
 	gamesjson = readFile('data/games.json')
+	games        = json2obj(gamesjson)	
 	platformjson = readFile('data/platforms.json')	
+	platforms    = json2obj(platformjson)
+
 	if(page != 'favicon.ico'):
 		mypage = readFile('pages/' + page + '.textile')
 		txpage = textile.textile(mypage)
 		return  dict(
 			language   = language,
 			page       = ''+txpage,
-			games      = json2obj(gamesjson),
-			platforms  = json2obj(platformjson),
+			games      = games,
+			platforms  = platforms,
 			page_title = page)
 	else:
 		abort(404, "Requested page does not exist !")
@@ -69,10 +75,11 @@ def index(page='index'):
 def game(gameid):
 	presetHeader(request,response)
 	gamesjson = readFile('data/games.json')
-	platformjson = readFile('data/platforms.json')
-	platforms  = json2obj(platformjson)
-	if(gamesjson and platforms):
-		games = json2obj(gamesjson)	
+	games        = json2obj(gamesjson)	
+	platformjson = readFile('data/platforms.json')	
+	platforms    = json2obj(platformjson)
+
+	if(games and platforms):
 		game = games[gameid]
 		if(games[gameid]):
 			return dict(
@@ -81,8 +88,29 @@ def game(gameid):
 				games      = games,
 				platforms  = platforms,
 				page_title = "Game "+game.title)
+		else:
+			abort(403,"Game for id="+gameid+" not found")
 	else:
 		abort(404,"The Requested Game id="+gameid)
+
+# Show games for a platform.
+@route('/games/<platformid:path>')
+@view('games')
+def games(platformid):
+	presetHeader(request,response)
+	gamesjson = readFile('data/games.json')
+	games        = json2obj(gamesjson)	
+	platformjson = readFile('data/platforms.json')	
+	platforms    = json2obj(platformjson)
+
+	if(games and platforms):
+		return dict(
+			language   = language,
+			games      = games,
+			platforms  = platforms,
+			page_title = "Games for "+platformid)
+	else:
+		abort(404,"The Requested Game id="+platformid)
 
 # Start server and delegate to cherrypy
 # multi-threading http server.
