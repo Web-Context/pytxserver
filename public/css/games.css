@@ -1,4 +1,3 @@
-games.css
 /**
 * games.css
 * A sample css piece of code to design a simple "Game Test Sheet.
@@ -31,10 +30,95 @@ border-bottom:1px dotted black;
 .clear {
 	clear:both;
 }
+/*----- Menu -----*/
+aside.menu {
+	margin:0px;
+}
+aside.menu ul{
+	display:block;
+	list-style:none;
+}
+aside.menu ul li{
+	display:block;
+}
+aside.menu ul li a{
+	display:block;
+	padding:4px 10px;
+	text-decoration:none;
+	border-bottom:1px solid #eee;
+	color:#666;
+}
+aside.menu ul li:hover a,
+aside.menu ul li a.active {
+	background-color:#eee;
+	color:#888;
+}
+/*----- Page design -----*/
 div.content{
 	margin:0% 15%;
 	width:70%;
 }
+/*----- Games list for platform -----*/
+
+section.games h2 {
+	margin-left:40px;
+	padding-left:0px;
+}
+section.games img.icon-platform {
+	float:left;
+	width:32px;
+	max-height:32px;
+	margin:10px;
+	margin-right:40px;
+	box-shadow:2px 2px 4px #000;
+}
+section.games article.game {
+	padding: 0px;
+}
+
+section.games article.game img.cover {
+	width:80px;
+	height:120px;
+}
+section.games article.game h1 {
+	font-size:14pt;
+}
+section.games article.game div.header {
+	background-color: transparent;
+	border: none;
+	min-height:none;
+	margin:0px;
+}
+section.games article.game div.header > *{
+	margin-left:100px;
+}
+section.games article.game div.note {
+	float: right;
+	font-size:21pt;
+	margin:40px 10px;
+	background-color:#000;
+	color:#fff;
+	padding:4px 12px;
+}
+section.games article.game div.header ul.platforms{
+	list-style:none;
+	text-align:right;
+	font-size:8pt;
+	border-top:1px dotted #666;
+	font-family:courier;
+	padding:0px;
+	margin:0px;
+}
+section.games article.game div.header ul.platforms li{
+	display:inline;
+	padding:0px;
+	margin:0px;
+}
+section.games article.game div.header ul.platforms li:before{
+	content:".";
+}
+
+/*-------- Game File ------*/
 article.game {
 	font-family: Arial;
 	padding: 2% 4%;
@@ -48,7 +132,7 @@ article.game img.cover {
 	height:240px;
 }
 article.game div.header {
-	background-color: #eee;
+	background-color: #ddd;
 	padding: 5px 10px;
 	border: 1px solid #aaa;
 	min-height:120px;
@@ -64,9 +148,14 @@ article.game div.note{
 	font-variant: normal;
 }
 article.game h1:before,
-article.game h2:before {
+article.game h2:before,
+section.games h1:before,
+section.games h2:before {
+	padding:0px;
+	margin:0px;
 	content:"";
 }
+
 article.game h1 {
 	font-size: 24pt;
 	padding:0px;
@@ -106,7 +195,7 @@ article.game p{
 }
 article.game .header .rates {
 	font-family: monospace;
-	font-size: 14pt;
+	font-size: 12pt;
 	padding: 10px 0px;
 	margin: 10px 0px 10px 180px;
 	border-top: 1px dotted #000;
@@ -135,7 +224,9 @@ article.game div.note {
 	margin:10px 0px;
 	background-color:#000;
 	color:#fff;
-	padding:4px;
+	padding:0px 16px;
+	border-radius:8px;
+	box-shadow:0px 0px 16px #fff inset;
 }
 article.game div.swing {
 	padding:10px 20px;
@@ -190,3 +281,4 @@ article.game div.swing div.minus h2{
 	width:1.2em;
 	clear:right;
 }
+

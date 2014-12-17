@@ -1,38 +1,18 @@
 from bottle import TEMPLATES, route, view, request, response, run, abort, static_file
 import textile
 import json
-from collections import namedtuple
+from jsonutils import FileUtils
+from textutils import TextUtils
+from htmlutils import HTMLUtils
+from databaseutils import DatabaseUtils
 
-language = 'en'
+language = 1
+__version__ = 1.1
 
-def convertRate(rate):
-	rate = rate/4
-	return ("-"*4)
-
-def presetHeader(request,response):
-	response.set_header('Content-Language', language)
-	if(request.get_cookie("gk2-visited")):
-		return True
-	else:
-		response.set_cookie("gk2-visited","yes")
-		return False
-
-# Convert JSON object to python object
-def _json_object_hook(d): 
-	return namedtuple('X', d.keys())(*d.values())
-
-# Convert JSON to object
-def json2obj(data): 
-	return json.loads(data, object_hook=_json_object_hook)
-
-# Smart function to read a file content.
-def readFile(filename):
-	f = open(filename, "r")
-	# Read the entire contents of a file at once.
-	fcontent = f.read()
-	f.close()
-	return fcontent
-
+fileUtils = FileUtils()
+textUtils = TextUtils()
+htmlUtils = HTMLUtils()
+database = DatabaseUtils()
 
 @route("/clear/cache")
 def clearCache():
@@ -42,75 +22,93 @@ def clearCache():
 # resource like css, js, jpg, png.
 @route('/public/<filepath:path>')
 def server_static(filepath):
-	presetHeader(request,response)
-
 	return static_file(filepath, root='public/')
 
 # Show a textile page
 @route('/')
 @route('/page/<page:path>')
 @view('page')
-def index(page='index'):
-	presetHeader(request,response)
-	gamesjson = readFile('data/games.json')
-	games        = json2obj(gamesjson)	
-	platformjson = readFile('data/platforms.json')	
-	platforms    = json2obj(platformjson)
+def index(page='index'):	
+	htmlUtils.presetHeader(request,response, language)
+	games     = database.findGames()
+	platforms = database.findPlatforms()
 
 	if(page != 'favicon.ico'):
-		mypage = readFile('pages/' + page + '.textile')
+		mypage = fileUtils.readFile('pages/' + page + '.textile')
 		txpage = textile.textile(mypage)
 		return  dict(
+			version = __version__,
 			language   = language,
 			page       = ''+txpage,
 			games      = games,
 			platforms  = platforms,
+			platform = {},
+			game = {},
 			page_title = page)
 	else:
 		abort(404, "Requested page does not exist !")
 
 # Show a game test.
-@route('/game/<gameid:int>')
+@route('/game/<gameId:path>')
 @view('game')
-def game(gameid):
-	presetHeader(request,response)
-	gamesjson = readFile('data/games.json')
-	games        = json2obj(gamesjson)	
-	platformjson = readFile('data/platforms.json')	
-	platforms    = json2obj(platformjson)
+def game(gameId):
+	htmlUtils.presetHeader(request,response, language)
+	games     = database.findGames()
+	platforms = database.findPlatforms()
+	game      = database.findGameById(gameId)
+	platform  = database.findPlatformByCode(game['platform'])
 
 	if(games and platforms):
-		game = games[gameid]
-		if(games[gameid]):
+		if(game):
+			game['rates'][0]=textUtils.convertRate(game['rates'][0])
+			game['rates'][1]=textUtils.convertRate(game['rates'][1])
+			game['rates'][2]=textUtils.convertRate(game['rates'][2])
+			game['rates'][3]=textUtils.convertRate(game['rates'][3])
 			return dict(
+				version = __version__,
 				language   = language,
 				game       = game,
 				games      = games,
 				platforms  = platforms,
-				page_title = "Game "+game.title)
+				platform = platform,
+				page_title = game['title'])
 		else:
-			abort(403,"Game for id="+gameid+" not found")
+			abort(404,"Game for _id="+gameId+" not found")
 	else:
-		abort(404,"The Requested Game id="+gameid)
+		abort(404,"The Requested Game _id="+gameId)
 
 # Show games for a platform.
-@route('/games/<platformid:path>')
+@route('/games/<platformCode:path>')
 @view('games')
-def games(platformid):
-	presetHeader(request,response)
-	gamesjson = readFile('data/games.json')
-	games        = json2obj(gamesjson)	
-	platformjson = readFile('data/platforms.json')	
-	platforms    = json2obj(platformjson)
+def games(platformCode):
+	htmlUtils.presetHeader(request,response, language)
+
+	games = database.findGamesForPlatform(platformCode)		
+	platforms = database.findPlatforms()
+	platform  = database.findPlatformByCode(platformCode)
 
 	if(games and platforms):
 		return dict(
+			version = __version__,
 			language   = language,
 			games      = games,
 			platforms  = platforms,
-			page_title = "Games for "+platformid)
+			platform = platform,
+			page_title = "Games for "+platformCode)
 	else:
-		abort(404,"The Requested Game id="+platformid)
+		abort(404,"The Requested Game id="+platformCode)
+
+@route("/game", method='PUT')
+def create():
+	htmlUtils.presetHeader(request,response, language)
+	data = request.body.read()
+	if not data:
+		abort(400,"No data received")
+	game = json.loads(data)
+	if not game.has_key('_id'):
+		abort(400,"no _id specified to store game data")
+	database.createGame(game)
+	return dict( game = game)
 
 # Start server and delegate to cherrypy
 # multi-threading http server.

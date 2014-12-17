@@ -4,7 +4,8 @@ Created and updated on 14-DEC-2014 by [Frédéric Delorme](mailto:frederic.delorme
 
 ## A smart and fast web server
 
-Our new web server rely on the bottle framwork and the cherrypy http multi-threading server.
+Our new web server rely on the bottle framework and the cherrypy http multi-threading server. for the data side, you will need a mongodb server.
+Data are initialized at startup.
 
 
 to be able to start the server.py :
@@ -12,6 +13,7 @@ to be able to start the server.py :
     $> pip install bottle
     $> pip install textile
     $> pip install cherrypy
+    $> pip install pymongo
     
 And the, just run the server :
 
@@ -31,6 +33,7 @@ Please, see the following project structure :
     |_ /data       # data for game tests
     |    |_ games.json
     |    |_ platforms.json
+    |    |_ users.json
     |_ /pages      # textiles pages for the website.
     |    |_ index.textile
     |    |_ page1.textile
@@ -42,7 +45,11 @@ Please, see the following project structure :
     |    |_ main.tpl
     |    |_ page.tpl
     |    |_ game.tpl
+    |_ databaseutils.py   # the data helpers over pymongo
+    |_ htmlutils.py   # the html utilities
+    |_ jsonutils.py   # the json loader
     |_ server.py   # the server
+    |_ textutils.py   # the text specific tools
     |_ README.md   # this small file.
 
 

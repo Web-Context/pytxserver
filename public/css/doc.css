@@ -26,7 +26,7 @@ aside{
 	float:right;
 }
 /**
- * Modificaiton du titre de l'article.
+ * Modification du titre de l'article.
  */
 header {
 	/*background-color:#eee;*/
@@ -42,6 +42,10 @@ header h1 {
 	color:#fff;
 	text-shadow:2px 2px 4px #000,-2px 2px 4px #000,2px -2px 4px #000,-2px -2px 4px #000;
 }
+header h2 {
+	color:#fff;
+	padding:0px 20px;
+}
 header p.version{
 	float:right;
 	padding:5px 10px;
@@ -55,10 +59,19 @@ header nav {
 	background-color:#333;
 	padding:4px 8px;
 }
+header nav ul {
+	list-style:none;
+}
+header nav ul li{
+	display:inline;
+}
 header nav ul li:before {
 	content: " » ";
 	color:#777;
 }
+header nav ul.right li:before {
+	content: "";
+	}
 header nav ul li a {
 	color:#fff;
 	text-decoration: none;

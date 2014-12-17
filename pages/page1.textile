@@ -4,7 +4,7 @@ you'll find a lots of test about video games here !
 
 h2. X360
 
-* "Watch_Dogs":/game/0
-* "Tomb Raider":/game/1
+* "Watch_Dogs":/game/000001
+* "Tomb Raider":/game/000002
 
 go back to "home":/
