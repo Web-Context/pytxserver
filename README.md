@@ -19,7 +19,6 @@ And the, just run the server :
 
     $> python server.py
 
-
 And go to [http://localhost:8000/](http://localhost:8000/)
 
 It will serve you some textile pages from the pages path, and static files like css, images and javascript from the public path.
@@ -30,27 +29,29 @@ and finally, its will be able to parse json files from the data path to display 
 Please, see the following project structure :
 
     /pyserver
-    |_ /data       # data for game tests
-    |    |_ games.json
-    |    |_ platforms.json
-    |    |_ users.json
-    |_ /pages      # textiles pages for the website.
-    |    |_ index.textile
-    |    |_ page1.textile
-    |_ /public     # styles, javascript and images
-    |    |_ css
-    |    |_ js
-    |    |_ images
-    |_ /views      # templates to render pages
-    |    |_ main.tpl
-    |    |_ page.tpl
-    |    |_ game.tpl
-    |_ databaseutils.py   # the data helpers over pymongo
-    |_ htmlutils.py   # the html utilities
-    |_ jsonutils.py   # the json loader
-    |_ server.py   # the server
-    |_ textutils.py   # the text specific tools
-    |_ README.md   # this small file.
+        |_ /data              # data for database initialization
+        |    |_ games.json
+        |    |_ platforms.json
+        |    |_ users.json
+        |_ /pages             # textiles pages for the website.
+        |    |_ index.textile
+        |    |_ page1.textile
+        |_ /public            # styles, javascript and images
+        |    |_ css
+        |    |_ js
+        |    |_ images
+        |_ /views             # templates to render pages
+        |    |_ main.tpl
+        |    |_ page.tpl
+        |    |_ game.tpl
+        |_ databaseutils.py   # the data helpers over pymongo
+        |_ htmlutils.py       # the html utilities
+        |_ jsonutils.py       # the json loader
+        |_ server.py          # the server
+        |_ textutils.py       # the text specific tools
+        |_ README.md          # this small file.
+        |_ requirements.txt   # Dependencies descriptionfile for travis-ci.
+
 
 
 ## History
@@ -71,7 +72,6 @@ Too easy to move to python and [bottle](http://bottlepy.org/), and [textile](htt
 ## Bottle framework
 
 Something very usefull: the [pdf](http://bottlepy.org/docs/dev/bottle-docs.pdf) docs !
-
 
 ## The Author
 
