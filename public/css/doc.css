@@ -31,20 +31,28 @@ aside{
 header {
 	/*background-color:#eee;*/
 	background-position:0px 0px;
-	background-image: url('../illustrations/wordpress-header-mcgivrer.jpg');
 	background-repeat: no-repeat;
 	background-size: 120%;
 	border-bottom:1px solid #666;
+}
+header.bg-home{
+	background-image: url('../illustrations/background-code.jpg');
+}
+header.bg-game{
+	background-image: url('../illustrations/background-videogame.jpg');
 }
 header h1 {
 	font-size: 60px;
 	padding:10px 20px;
 	color:#fff;
-	text-shadow:2px 2px 4px #000,-2px 2px 4px #000,2px -2px 4px #000,-2px -2px 4px #000;
 }
 header h2 {
 	color:#fff;
 	padding:0px 20px;
+}
+header h1,
+header h2{
+	text-shadow:2px 2px 4px #000,-2px 2px 4px #000,2px -2px 4px #000,-2px -2px 4px #000;
 }
 header p.version{
 	float:right;

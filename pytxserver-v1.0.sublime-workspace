@@ -1,0 +1,502 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"jon",
+				"jsonutils"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"pu",
+				"publicationDate"
+			],
+			[
+				"pla",
+				"platforms"
+			],
+			[
+				"json",
+				"json2obj"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"a",
+				"a	<a href=\"mailto:\">"
+			],
+			[
+				"html",
+				"html	html"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"op",
+				"option	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"python",
+				"Set Syntax: PythonImproved"
+			],
+			[
+				"git quick",
+				"Git: Quick Status"
+			],
+			[
+				"git qui",
+				"Git: Quick Add"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python3"
+			],
+			[
+				"brea",
+				"Python Breakpoints: Toggle"
+			],
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"indeinnt",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"maven",
+				"Maven: Run clean install"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 196.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/c/Projects/python/pytxserver/databaseutils.py",
+		"/c/Projects/python/pytxserver/server.py",
+		"/C/Users/frede_000.ULTRANOSTROMO/Desktop/banque.txt",
+		"/c/Projects/python/pytxserver/public/css/doc.css",
+		"/c/Projects/python/pytxserver/public/css/games.css",
+		"/c/Projects/python/pytxserver/views/game.tpl",
+		"/c/Projects/python/pytxserver/jsonutils.py",
+		"/C/Projects/python/pytxserver/views/search.tpl",
+		"/c/Projects/python/pytxserver/views/main.tpl",
+		"/c/Projects/python/pytxserver/README.md",
+		"/c/Projects/python/pytxserver/textutils.py",
+		"/c/Projects/python/pytxserver/.travis.yml",
+		"/C/Projects/python/pytxserver/tests.py",
+		"/c/Projects/python/pytxserver/.gitignore",
+		"/c/Projects/python/pytxserver/htmlutils.py",
+		"/c/Projects/python/pytxserver/views/page.tpl",
+		"/C/Projects/python/pytxserver/requirements.txt",
+		"/C/Projects/python/pytxserver/.travis.yml",
+		"/c/Projects/python/pytxserver/install_db.py",
+		"/c/tools/database/mongodb/2.6.4/bin/mongo-start.bat",
+		"/c/Projects/python/pytxserver/game.py",
+		"/C/tools/ide/eclipse/4.4/eclipse.ini",
+		"/c/Projects/python/pytxserver/data/platforms.json",
+		"/c/Projects/python/pytxserver/views/games.tpl",
+		"/c/Projects/python/pytxserver/data/games.json",
+		"/c/Projects/python/pytxserver/pages/page1.textile",
+		"/C/Projects/python/pytxserver/game.py",
+		"/c/Projects/python/pytxserver/bottle.py",
+		"/c/Projects/python/pytxserver/pages/index.textile",
+		"/c/Projects/python/pytxserver/template/main.tpl",
+		"/c/Projects/python/pytxserver/template/page.tpl",
+		"/c/Projects/python/pytxserver/template/game.tpl",
+		"/C/Projects/python/pytxserver/public/css/games.css",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Jeux video/platform-game_title.html",
+		"/C/Projects/bin/eclipse",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/OmniMarkupPreviewer/default_settings.json",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/User/OmniMarkupPreviewer.sublime-settings",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/User/OmniMarkupPreviewer/templates/document.tpl",
+		"/c/Projects/python/pytxserver/template/main.html",
+		"/C/Projects/python/pytxserver/template/game.html",
+		"/C/Projects/angular/create-web-app-with-grails-and-angularjs/how-to/AngularJS-web-application.textile",
+		"/C/Projects/angular/create-web-app-with-grails-and-angularjs/samples/front-end/README.md",
+		"/C/workspaces/tutorials/maven2/test/src/main/java/org/jboss/tools/example/html5/test/Customer.java",
+		"/c/Projects/java/gk2/src/main/webapp/WEB-INF/jetty.xml",
+		"/c/Projects/java/gk2/src/main/webapp/WEB-INF/log4j.xml",
+		"/c/Projects/java/gk2/src/main/webapp/WEB-INF/web.xml",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/persist/GamePersistenceService.java",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/persist/GenericPersistenceService.java",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/persist/GenericDataLoaderService.java",
+		"/c/Projects/java/gk2/pom.xml",
+		"/c/Projects/java/gk2/README.md",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/services/rest/GameRestService.java",
+		"/C/tools/git/1.8.4/bin/idea",
+		"/c/Projects/html5/sample/index.html",
+		"/C/Projects/html5/sample/styles/main.css",
+		"/C/Projects/textiledoc/TextileDoc/README.textile",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/index.html",
+		"/C/Projects/java/archive/gk2restbackend/src/main/java/com/webcontext/apps/gk2/restservice/repository/GameRepository.java",
+		"/C/Projects/java/archive/gk2restbackend/src/test/java/com/webcontext/apps/gk2/restservice/test/GameRepositoryTest.java",
+		"/C/Projects/java/archive/gk2restbackend/src/main/resources/log4j.properties",
+		"/C/Projects/java/archive/gk2restbackend/log/myoutput.log",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/WEB-INF/web-add.xml",
+		"/C/Projects/java/archive/gk2restbackend/pom.xml",
+		"/C/Users/frede_000.ULTRANOSTROMO/.m2/settings.xml",
+		"/C/Users/frede_000.ULTRANOSTROMO/.m2/settings-fde.xml",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/WEB-INF/jetty-env.xml",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/WEB-INF/web.xml",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/WEB-INF/jetty-context.xml",
+		"/C/Projects/java/archive/gk2restbackend/src/main/webapp/WEB-INF/beans.xml",
+		"/C/Projects/java/archive/gk2restbackend/.travis.yml",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/services/rest/GamesApplication.java",
+		"/c/Projects/java/gk2/src/main/resources/META-INF/persistence.xml",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/models/Screenshot.java",
+		"/c/Projects/java/gk2/src/main/java/com/webcontext/apps/gk2/models/Game.java",
+		"/C/tools/scripts/jide.bat",
+		"/C/tools/scripts/javaenv.bat",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/OmniMarkupPreviewer/public/games.css",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/OmniMarkupPreviewer/OmniMarkupPreviewer.sublime-settings",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/OmniMarkupPreviewer/templates/game-template.tpl",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/Preview/Preview.sublime-settings",
+		"/C/tools/scripts/jide",
+		"/C/tools/scripts/javaenv",
+		"/C/Users/frede_000.ULTRANOSTROMO/.javaenv",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/User/OmniMarkupPreviewer/public/document.css",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/personnel/Divers/home_network.txt",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Projets/docs/doc-template.textile",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Jeux video/platform-game_title.textile",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/User/OmniMarkupPreviewer/templates/game-template.tpl",
+		"/C/Users/frede_000.ULTRANOSTROMO/AppData/Roaming/Sublime Text 2/Packages/User/OmniMarkupPreviewer/public/games.css",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Jeux video/psp-little-big-planet.textile",
+		"/C/Projects/tutorials/javaee-nosql/src/main/resources/META-INF/persistence.xml",
+		"/C/Projects/tutorials/javaee-nosql/src/main/java/model/Order.java",
+		"/C/Projects/tutorials/javaee-nosql/src/main/java/example/TestServlet.java",
+		"/C/Projects/tutorials/javaee-nosql/src/main/java/example/Test.java",
+		"/C/Projects/tutorials/javaee-nosql/src/main/webapp/index.jsp",
+		"/C/Projects/tutorials/javaee-nosql/pom.xml",
+		"/C/Projects/java/gamesrestserver/README.md",
+		"/C/Projects/tutorials/tutorial-maven/docs/maven-step3-web_app_et_tests.textile",
+		"/C/Projects/tutorials/tutorial-maven/docs/maven-step2-dans_le_gras_du_sujet.textile",
+		"/C/Projects/tutorials/tutorial-maven/docs/maven-step1_premiers_pas_pour_les_non_sachants.textile",
+		"/E/javatools/scripts/setXdrive.bat",
+		"/C/Projects/tutorials/tutorial-maven/samples/3-restwebapp/src/main/webapp/index.html",
+		"/C/Projects/java/java-httpserver/contributing.md",
+		"/C/Projects/xbmc/XBMC-movies_files/saved_resource(81)",
+		"/C/tools/ide/IntelliJ/12.1.6/bin/idea.bat",
+		"/c/Projects/tutorials/tutorial-maven/.gitignore",
+		"/C/tools/ide/IntelliJ/12.1.6/bin/idea.properties",
+		"/C/Users/frede_000.ULTRANOSTROMO/.bashrc",
+		"/C/tools/ide/IntelliJ/12.1.6/bin/idea.exe.vmoptions",
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/pom.xml",
+		"/C/tools/scripts/jide.sh",
+		"/C/tools/scripts/javaenvsettings",
+		"/C/Users/frede_000.ULTRANOSTROMO/userjavaenv.bat",
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/.tern-project",
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/GameRSEndpoint.java",
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/PostServiceRS.java",
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/managers/GameManager.java",
+		"/C/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/GameRSEndpoint.java",
+		"/C/Projects/%USERPROFILE%/userjavaenv.bat",
+		"/C/Projects/tutorials/tutorial-maven/samples/pom.xml",
+		"/c/toolstest/ide/eclipse/4.4/eclipse.ini",
+		"/C/toolstest/scripts/javaenv.bat",
+		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Projets/Tutorials/tutorial-angularjs/do-you-angularjs.textile",
+		"/c/Projects/html5/gametests/app/views/game-create.html",
+		"/c/Projects/html5/gametests/app/index.html",
+		"/c/Projects/html5/gametests/app/scripts/services/gameservice.js",
+		"/c/Projects/html5/gametests/app/views/main.html",
+		"/c/Projects/html5/gametests/app/scripts/controllers/main.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.*",
+			"*.js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\\"",
+			"author",
+			"box",
+			"pagetpl",
+			"item",
+			"feeling",
+			"rate.",
+			"replay",
+			"art.",
+			"</b>",
+			"<b>",
+			"<b",
+			"@",
+			"*",
+			"texdocs",
+			"\"",
+			"-rw-r--r--    1 frede_00 Administ      ",
+			"drwxr",
+			"drwxr-xr-x    1 frede_00 Administ     4.0k Nov 24 23:41 .\ndrwxr-xr-x   11 frede_00 Administ     4.0k Nov 21 01:02 ..\n-rw-r--r--    1 frede_00 Administ       38 Nov 21 21:01 .bowerrc\n-rw-r--r--    1 frede_00 Administ      415 Nov 21 01:15 .editorconfig\n-rw-r--r--    1 frede_00 Administ       11 Nov 21 01:15 .gitattributes\n-rw-r--r--    1 frede_00 Administ       52 Nov 21 01:15 .gitignore\n-rw-r--r--    1 frede_00 Administ      376 Nov 21 01:15 .jshintrc\ndrwxr-xr-x    1 frede_00 Administ     4.0k Nov 22 17:22 .sass-cache\n-rw-r--r--    1 frede_00 Administ      11k Nov 24 22:30 .sublime-grunt.cache\ndrwxr-xr-x    1 frede_00 Administ        0 Nov 24 23:41 .tmp\n-rw-r--r--    1 frede_00 Administ      110 Nov 21 01:17 .travis.yml\n-rw-r--r--    1 frede_00 Administ      10k Nov 21 21:01 Gruntfile.js\ndrwxr-xr-x    1 frede_00 Administ     4.0k Nov 22 22:17 app\n-rw-r--r--    1 frede_00 Administ      631 Nov 25 00:14 bower.json\ndrwxr-xr-x   20 frede_00 Administ     4.0k Nov 25 00:14 bower_components\ndrwxr-xr-x    1 frede_00 Administ     4.0k Nov 24 23:24 dist\ndrwxr-xr-x    1 frede_00 Administ     8.0k Nov 21 21:18 node_modules\n-rw-r--r--    1 frede_00 Administ     1010 Nov 24 23:24 package.json\ndrwxr-xr-x    1 frede_00 Administ        0 Nov 21 21:01 test\n",
+			".texdocs",
+			".markdown-body ",
+			"\"",
+			"projectsApp",
+			"section",
+			"div.swing ",
+			"article.game ",
+			"}",
+			"${",
+			"[\"]board[\"]: [{][^}]+[\"]id[\"]: [\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[}],[^}]+[\"]card[\"]: [{][^}]+[\"]id[\"][^}]+[\"]name[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[}]",
+			"[\"]board[\"]: [{][^}]+[\"]id[\"]: [\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[}],[^}]+[\"]card[\"]: [{][^}]+[\"]name[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[}]",
+			"[\"]board[\"]: [{][^}]+[^}]+[\"]id[\"]: [^}]+[\"]name[\"]: [\"]([a-zA-Z0-9- ]+)[\"][^}]+[\"]shortLink[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+",
+			"[\"]board[\"]: [{][^}]+[^}]+[}],[^}]+[\"]card[\"]: [{][^}]+[\"]id[\"]: [\"]({card}([a-zA-Z0-9- ]+])[\"][^}]+[}]",
+			"[\"]board[\"]: [{][^}]+[^}]+[}],[^}][\"]",
+			"[\"]board[\"]: [{][^}]+[^}]+[\"]id[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[\"]name[\"]: [\"]([a-zA-Z0-9- ]+)[\"][^}]+[\"]shortLink[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+",
+			"[{][^}]+[\"]board[\"]: [{][^}]+[^}]+[\"]id[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[\"]name[\"]: [\"]([a-zA-Z0-9- ]+)[\"][^}]+[\"]shortLink[\"]: [\"]([a-zA-Z0-9 ]+)[\"][^}]+[}]",
+			"[{][^}]+[\"]id[\"]:[\"]({boardId}[a-zA-Z0-9 ]+)[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]id[\"]:[\"]({BoardId}[a-zA-Z0-9])[\"][^}]+[}]",
+			"[{][^}]+[\"]id[\"]:[\"]({BoardId}[a-zA-Z0-9])[\"]",
+			"[{][^}]+[\"]id[\"]:[\"]({BoardId}[a-zA-Z0-9])[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[^}]+[\"]actions[\"]:[{][^}]+[{][^}]+[\"]board[\"]:[{][^}]+[{][^}]+[\"]id[\"]:[\"][\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]board[\"]:[{][^}]+[{][^}]+[\"]id[\"]:[\"][\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]idBoard[\"]:[\"]9753[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]board[\"]:[^}]+[{][^}]+[\"]id[\"]:[^}]+[\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]board[\"]: [{][^}]+[\"]id[\"]:[\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]board[\"]:[{][^}]+[\"]id[\"]:[\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"[{][^}]+[\"]board[\"]:[{][^}][\"]id[\"]:[\"]53e38e406b1ee4c7a9123dd8[\"][^}]+[\"]name[\"]:[\"]({Description}[a-zA-Z0-9 ]+)[\"][^}]+[\"]shortLink[\"]:[\"]({Id}([a-zA-Z0-9]+))[\"][^}]+[}]",
+			"pixel"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			".texdocs ",
+			".markdown-body .texdocs",
+			"'",
+			"games.app",
+			"}}",
+			"{{"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 148.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"data",
+				"databaseutils.py"
+			],
+			[
+				"datab",
+				"databaseutils.py"
+			],
+			[
+				"games",
+				"views/games.tpl"
+			],
+			[
+				"games.",
+				"public/css/games.css"
+			],
+			[
+				"doc",
+				"public/css/doc.css"
+			],
+			[
+				"games.json",
+				"data/games.json"
+			],
+			[
+				"platf",
+				"data/platforms.json"
+			],
+			[
+				"game.",
+				"game.py"
+			],
+			[
+				"pom",
+				"pom.xml"
+			],
+			[
+				"gamere",
+				"src/main/java/com/webcontext/apps/gk2/restservice/repository/GameRepository.java"
+			],
+			[
+				"game",
+				"app/views/game-create.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true
+}
