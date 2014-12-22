@@ -44,6 +44,7 @@ Please, see the following project structure :
         |    |_ main.tpl
         |    |_ page.tpl
         |    |_ game.tpl
+        |    |_ games.tpl
         |_ databaseutils.py   # the data helpers over pymongo
         |_ htmlutils.py       # the html utilities
         |_ jsonutils.py       # the json loader
