@@ -1,9 +1,8 @@
 # PyServer v1.1
 
-<a href="https://travis-ci.org/mcgivrer/pytxserver" title="Go and see build status"><img src="https://travis-ci.org/mcgivrer/pytxserver.svg?branch=master" alt="build status" title="Travis-CI build status"/></a>
+[![Go and see build status](https://travis-ci.org/mcgivrer/pytxserver.svg?branch=master)](https://travis-ci.org/mcgivrer/pytxserver)
 
-
-Created and updated on 14-DEC-2014 by [Frédéric Delorme](mailto:frederic.delorme@web-context.com)
+Created and updated on 14-DEC-2014 by [FrÃ©dÃ©ric Delorme](mailto:frederic.delorme@web-context.com)
 
 ## A smart and fast web server
 
@@ -78,7 +77,7 @@ Something very usefull: the [pdf](http://bottlepy.org/docs/dev/bottle-docs.pdf) 
 
 ## The Author
 
-Frédéric Delorme is a Web developer and a software architect for many years and on multiple software platform. But he spent the 11 last years working professionally on the Java platform in the web world. Bulding WebApp solution for multiple customers, in many business activities, like Bank, Insurance, Industries, and web !
+FrÃ©dÃ©ric Delorme is a Web developer and a software architect for many years and on multiple software platform. But he spent the 11 last years working professionally on the Java platform in the web world. Bulding WebApp solution for multiple customers, in many business activities, like Bank, Insurance, Industries, and web !
 
 I've just joined in 2014, the GE Health Care team on a Dose management software solution.
 
