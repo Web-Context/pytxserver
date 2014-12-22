@@ -6,9 +6,10 @@
 <link rel="stylesheet" type="text/css" href="/public/css/github.css" />
 <link rel="stylesheet" type="text/css" href="/public/css/doc.css" />
 <link rel="stylesheet" type="text/css" href="/public/css/games.css" />
+<script type="text/javascript" src="/public/js/jquery-1.11.2.min.js"></script>
 </head>
 <body>
-	<header class="background">
+	<header class="background bg-{{csspage}}">
 		<p class="version">PyServer V{{version}}</p>
 		<h1>The Game</h1>
 		<h2>{{page_title}}</h2>
@@ -16,7 +17,7 @@
 			<ul><li class="right"><input type="search" name="search" id="search" cols="20" value="" placeholder="search game..."/></li></ul>
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="/games/">games</a></li>
+				<li><a href="/games/all">games</a></li>
 			</ul>			
 		</nav>
 	</header>
@@ -52,9 +53,20 @@
 	<footer>
 		<p>
 			&copy; <a href="http://mcgivrer.wordpress.com/">McGivrer</a> 2014 - <a
-				href="mailto:frederic.delorme@gmail.com&subject=PyTXServer"
+				href="mailto:frederic.delorme@gmail.com&amp;subject=PyTXServer"
 				title="Send a mail to author">contact</a>
 		</p>
 	</footer>
+	<script type="text/javascript">
+	$(window).ready(function(){
+		$('#search').keypress(function(event){
+			if(event.which == 13){
+				$.get( "/games/search/"+$('#search').val(), function( response ) {
+    				console.log( response ); // server response
+				});
+			}
+		});
+	});
+	</script>
 </body>
 </html>

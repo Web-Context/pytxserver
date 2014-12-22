@@ -32,13 +32,15 @@ def index(page='index'):
 	htmlUtils.presetHeader(request,response, language)
 	games     = database.findGames()
 	platforms = database.findPlatforms()
-
+	csspage   = "home"
+	
 	if(page != 'favicon.ico'):
 		mypage = fileUtils.readFile('pages/' + page + '.textile')
 		txpage = textile.textile(mypage)
 		return  dict(
-			version = __version__,
+			version    = __version__,
 			language   = language,
+			csspage    = csspage,
 			page       = ''+txpage,
 			games      = games,
 			platforms  = platforms,
@@ -57,6 +59,7 @@ def game(gameId):
 	platforms = database.findPlatforms()
 	game      = database.findGameById(gameId)
 	platform  = database.findPlatformByCode(game['platform'])
+	csspage      = "game"
 
 	if(games and platforms):
 		if(game):
@@ -65,39 +68,60 @@ def game(gameId):
 			game['rates'][2]=textUtils.convertRate(game['rates'][2])
 			game['rates'][3]=textUtils.convertRate(game['rates'][3])
 			return dict(
-				version = __version__,
+				version    = __version__,
 				language   = language,
+				csspage    = csspage,
 				game       = game,
 				games      = games,
 				platforms  = platforms,
-				platform = platform,
+				platform   = platform,
 				page_title = game['title'])
 		else:
 			abort(404,"Game for _id="+gameId+" not found")
 	else:
 		abort(404,"The Requested Game _id="+gameId)
 
+# Search for a game.
+@route('/games/search/<title:path>')
+@view('search')
+def search(title):
+	htmlUtils.presetHeader(request,response, language)
+
+	games = database.searchGameByTitle(title)		
+
+	if(games):
+		page_title = "Search result"+(len(games))+" for '"+title+"'"
+		return dict(
+			version    = __version__,
+			language   = language,
+			games      = games,
+			page_title = page_title)
+	else:
+		abort(404,"search for '"+title+"' has no result.")
+
 # Show games for a platform.
 @route('/games/<platformCode:path>')
 @view('games')
 def games(platformCode):
 	htmlUtils.presetHeader(request,response, language)
-
 	games = database.findGamesForPlatform(platformCode)		
 	platforms = database.findPlatforms()
 	platform  = database.findPlatformByCode(platformCode)
-
+	csspage   = "game" 
+	
 	if(games and platforms):
 		return dict(
-			version = __version__,
+			version    = __version__,
 			language   = language,
+			csspage    = csspage,
 			games      = games,
 			platforms  = platforms,
-			platform = platform,
+			platform   = platform,
 			page_title = "Games for "+platformCode)
 	else:
 		abort(404,"The Requested Game id="+platformCode)
 
+#create a game.
 @route("/game", method='PUT')
 def create():
 	htmlUtils.presetHeader(request,response, language)
@@ -109,6 +133,18 @@ def create():
 		abort(400,"no _id specified to store game data")
 	database.createGame(game)
 	return dict( game = game)
+
+# User login in JSON format.
+@route("/login", method="POST") 
+def authenticate(): 
+	username = request.forms.get("username") 
+	password = request.forms.get("password")
+	user =  check_login(username, password)
+	if user :
+		userjson = jsonutils.json2obj(user)
+		return "{'message':'User not authorized to login','user':"+userjson+"}"
+	else: 
+		return abort(403,"{'message':'User not authorized to login'}") 
 
 # Start server and delegate to cherrypy
 # multi-threading http server.

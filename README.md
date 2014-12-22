@@ -1,5 +1,7 @@
 # PyServer v1.1
 
+[![Go and see build status](https://travis-ci.org/mcgivrer/pytxserver.svg?branch=master)](https://travis-ci.org/mcgivrer/pytxserver)
+
 Created and updated on 14-DEC-2014 by [Frédéric Delorme](mailto:frederic.delorme@web-context.com)
 
 ## A smart and fast web server
