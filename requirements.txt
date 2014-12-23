@@ -1,3 +1,5 @@
 pymongo
 textile
 bottle
+cherrypy
+beaker

@@ -1,3 +1,4 @@
+
 # PyServer v1.1
 
 [![Go and see build status](https://travis-ci.org/mcgivrer/pytxserver.svg?branch=master)](https://travis-ci.org/mcgivrer/pytxserver)
@@ -12,29 +13,61 @@ Data are initialized at startup.
 
 to be able to start the server.py :
 
+    :::bash
     $> pip install bottle
     $> pip install textile
     $> pip install cherrypy
     $> pip install pymongo
     
+or
+
+    :::bash
+    $> pip install -r requirements.txt
+
+
 And the, just run the server :
 
+    :::bash
     $> python server.py
 
 And go to [http://localhost:8000/](http://localhost:8000/)
 
-It will serve you some textile pages from the pages path, and static files like css, images and javascript from the public path.
+### Textiles pages
 
-and finally, its will be able to parse json files from the data path to display Video Game tests.
+It will serve you some textile pages from the pages path, and static files like css, images and javascript from the public path:
 
+![Pages are displayed accordingly to your textiles files and links](docs/images/screenshot-0001.jpg)
+
+_(1). Pages are displayed accordingly to your textiles files and links_
+
+![Some links to other pages](docs/images/screenshot-0002.jpg)
+
+_(2). Some links to other pages_
+
+### Structured documents
+
+And finally, its will be able to parse MongoDB collections to show structured data. Those collections could be initialized from json files in the data folder. In the delivered sample application, some Games "lorem ipsum" tests are displayed.
+
+![Games tests diplsayed by game platform](docs/images/screenshot-0003.jpg)
+
+_(3). Games tests diplsayed by game platform_
+
+![One specific game test in details](docs/images/screenshot-0004.jpg)
+
+_(4). One specific game test in details_
+
+## Project folder structure
 
 Please, see the following project structure :
 
+    :::bash
     /pyserver
-        |_ /data              # data for database initialization
+        |_ /dataset           # data for database initialization
         |    |_ games.json
         |    |_ platforms.json
         |    |_ users.json
+        |_ /docs
+        |    |_ images        # screenshots
         |_ /pages             # textiles pages for the website.
         |    |_ index.textile
         |    |_ page1.textile
@@ -55,9 +88,11 @@ Please, see the following project structure :
         |_ README.md          # this small file.
         |_ requirements.txt   # Dependencies descriptionfile for travis-ci.
 
-
-
 ## History
+
+### 1.2 
+
+Rewrite the README.md file to add screenshot, and start adding user login support.
 
 ### 1.1
 
