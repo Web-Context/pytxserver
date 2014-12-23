@@ -14,13 +14,12 @@ class DatabaseUtils:
         self.client.platforms
         self.client.users
 
-        self.loadData(self.client.games, "data/games.json")
-        self.loadData(self.client.platforms, "data/platforms.json")
-        self.loadData(self.client.users, "data/users.json")
+        self.loadData(self.client.games, "dataset/games.json")
+        self.loadData(self.client.platforms, "dataset/platforms.json")
+        self.loadData(self.client.users, "dataset/users.json")
 
     # Load filename JSON content to the named collection.
-    def loadData(self, collection, filename):
-        
+    def loadData(self, collection, filename):        
         """
         This loadData method load data from a jsonUtils file and load them into
         the collection.
@@ -89,12 +88,13 @@ class DatabaseUtils:
 
     # Retrieve User on its username.
     def findUserByUsername(self, username = "*"):
-        users = self.client.users.find({'username':username})
-        return users
+        user = self.client.users.find({'username':username}).limit(1)
+        return user[0]
     
     # Authenticate user on its username/password.
     def authenticate(self, username, password):
         user = self.findUserByUsername(username)
+        print(user)
         if (user['password'] == password):
             return user
         else:

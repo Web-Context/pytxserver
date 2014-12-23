@@ -25,21 +25,102 @@ aside{
 .right {
 	float:right;
 }
+.form {
+	padding:0px;
+	width:400px;
+	border-radius:8px;
+}
+.form li input{
+	padding:4px;
+}
+.form  input.default{
+	background-color:#699;
+	border:1px solid #366 inset;
+}
+.form  input.default:hover{
+	text-shadow: 2px 2px 4px #000;
+}
+.form label{
+	display:inline-block;
+	width:120px;
+}
+.form input[type=submit],
+.form input[type=button]{
+	float:right;
+	padding:4px;
+	margin:10px 10px 10px 0px;
+	width:100px
+}
+.form li {
+	padding-bottom:10px;
+}
+.form h1{
+	display:block;
+	padding:10px;
+	margin:0px;
+	background-color:#999;
+	color:#fff;
+	font-size: 11pt;
+	border-radius:8px 8px 0px 0px;
+}
+.form-content {
+	padding:10px;
+	list-style:none;
+}
+.form-action{
+	display:block;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	text-align:right;
+	padding:0px;
+	margin:0px;
+	background-color:#ddd;
+	border-radius: 0px 0px 8px 8px;
+}
+.form-action input{
+	display:block;
+	background-color:#999;
+	color:#fff;
+	border-radius:8px;
+	border:1px solid #000 inset;
+}
+.form-action input:hover{
+	border:1px solid #000 outset;
+}
+.absolute-centered {
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:30% 40%;
+	width:350px;
+	height:250px;
+	border:1px solid #000;
+	background-color:#fff;
+	box-shadow:8px 8px 16px #888;
+}
+.hidden{
+	display:none;
+}
+.show{
+	display:block;
+}
 /**
+
  * Modification du titre de l'article.
  */
 header {
 	/*background-color:#eee;*/
 	background-position:0px 0px;
 	background-repeat: no-repeat;
-	background-size: 120%;
+	background-size: 100%;
 	border-bottom:1px solid #666;
 }
 header.bg-home{
-	background-image: url('../illustrations/background-code.jpg');
+	background-image: url('http://p1.pichost.me/i/68/1924582.jpg');
 }
 header.bg-game{
-	background-image: url('../illustrations/background-videogame.jpg');
+	background-image: url('http://p1.pichost.me/i/37/1606732.jpg');
 }
 header h1 {
 	font-size: 60px;
@@ -51,8 +132,12 @@ header h2 {
 	padding:0px 20px;
 }
 header h1,
+header .version,
 header h2{
-	text-shadow:2px 2px 4px #000,-2px 2px 4px #000,2px -2px 4px #000,-2px -2px 4px #000;
+	text-shadow:2px 2px 8px #000,
+		-2px 2px 8px #000,
+		2px -2px 8px #000,
+		-2px -2px 8px #000;
 }
 header p.version{
 	float:right;
@@ -61,7 +146,6 @@ header p.version{
 	margin-top:40px;
 	font-size:10pt;
 	color:#ccc;
-	background-color:#777;
 }
 header nav {
 	background-color:#333;
