@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"W",
+				"windows"
+			],
+			[
+				"script",
+				"script"
+			],
+			[
+				"focus",
+				"focusOnWindow"
+			],
+			[
+				"retre",
+				"Retrieve"
+			],
+			[
 				"ke",
 				"keypress"
 			],
@@ -83,85 +99,20 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/c/Projects/python/pytxserver/README.md",
-			"settings":
-			{
-				"buffer_size": 4001,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/c/Projects/python/pytxserver/server.py",
-			"settings":
-			{
-				"buffer_size": 4711,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "userutils.py",
-			"settings":
-			{
-				"buffer_size": 517,
-				"line_ending": "Windows",
-				"name": "usermanagement"
-			}
-		},
-		{
-			"file": "/c/Projects/python/pytxserver/views/main.tpl",
-			"settings":
-			{
-				"buffer_size": 3110,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/login_form.html",
-			"settings":
-			{
-				"buffer_size": 714,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/c/Projects/python/pytxserver/requirements.txt",
-			"settings":
-			{
-				"buffer_size": 38,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/c/Projects/python/pytxserver/public/css/doc.css",
-			"settings":
-			{
-				"buffer_size": 6833,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/c/Projects/python/pytxserver/databaseutils.py",
-			"settings":
-			{
-				"buffer_size": 3578,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 288.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"git add",
-				"Git: Add..."
-			],
-			[
 				"indent",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"git add",
+				"Git: Add..."
 			],
 			[
 				"git pus",
@@ -240,7 +191,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 472.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -257,11 +208,24 @@
 	},
 	"file_history":
 	[
+		"/c/Projects/python/pytxserver/README.md",
+		"/C/Projects/python/pytxserver/public/js/windows_manager.js",
+		"/c/Projects/python/pytxserver/views/login_form.html",
+		"/c/Projects/python/pytxserver/userutils.py",
+		"/c/Projects/python/pytxserver/gravatarutils.py",
+		"/c/Projects/python/pytxserver/server.py",
+		"/C/Projects/python/pytxserver/views/header.html",
+		"/c/Projects/python/pytxserver/views/main.tpl",
+		"/C/Projects/python/pytxserver/views/footer.html",
+		"/c/Projects/python/pytxserver/public/css/doc.css",
+		"/c/Projects/python/pytxserver/requirements.txt",
+		"/C/Projects/python/pytxserver/views/login_form.html",
+		"/c/Projects/python/pytxserver/public/js/gravatar.js",
+		"/c/Projects/python/pytxserver/databaseutils.py",
+		"/C/Projects/python/pytxserver/userutils.py",
+		"/C/Projects/python/pytxserver/public/js/gravatar.js",
 		"/c/Projects/python/pytxserver/dataset/users.json",
 		"/c/Projects/python/pytxserver/pages/index.textile",
-		"/c/Projects/python/pytxserver/public/css/doc.css",
-		"/c/Projects/python/pytxserver/server.py",
-		"/c/Projects/python/pytxserver/databaseutils.py",
 		"/c/Projects/python/pytxserver/data/games.json",
 		"/C/Users/frede_000.ULTRANOSTROMO/Desktop/banque.txt",
 		"/c/Projects/python/pytxserver/.git/config",
@@ -269,8 +233,6 @@
 		"/c/Projects/python/pytxserver/views/game.tpl",
 		"/c/Projects/python/pytxserver/jsonutils.py",
 		"/C/Projects/python/pytxserver/views/search.tpl",
-		"/c/Projects/python/pytxserver/views/main.tpl",
-		"/c/Projects/python/pytxserver/README.md",
 		"/c/Projects/python/pytxserver/textutils.py",
 		"/c/Projects/python/pytxserver/.travis.yml",
 		"/C/Projects/python/pytxserver/tests.py",
@@ -373,18 +335,7 @@
 		"/C/tools/scripts/javaenvsettings",
 		"/C/Users/frede_000.ULTRANOSTROMO/userjavaenv.bat",
 		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/.tern-project",
-		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/GameRSEndpoint.java",
-		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/PostServiceRS.java",
-		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/managers/GameManager.java",
-		"/C/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/GameRSEndpoint.java",
-		"/C/Projects/%USERPROFILE%/userjavaenv.bat",
-		"/C/Projects/tutorials/tutorial-maven/samples/pom.xml",
-		"/c/toolstest/ide/eclipse/4.4/eclipse.ini",
-		"/C/toolstest/scripts/javaenv.bat",
-		"/C/Users/frede_000.ULTRANOSTROMO/Google Drive/Projets/Tutorials/tutorial-angularjs/do-you-angularjs.textile",
-		"/c/Projects/html5/gametests/app/views/game-create.html",
-		"/c/Projects/html5/gametests/app/index.html",
-		"/c/Projects/html5/gametests/app/scripts/services/gameservice.js"
+		"/c/Projects/tutorials/tutorial-maven/samples/7-frontendwebapp/src/main/java/com/webcontent/apps/frontendwebapp/service/rest/GameRSEndpoint.java"
 	],
 	"find":
 	{
@@ -404,6 +355,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"WindowsFocus",
 			"jpg",
 			"LANG   =",
 			"database",
@@ -465,6 +417,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"WindowsManager",
 			"language    =",
 			"db",
 			"LANG",
@@ -486,226 +439,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/c/Projects/python/pytxserver/README.md",
-					"settings":
-					{
-						"buffer_size": 4001,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2948,
-								2948
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2140.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/c/Projects/python/pytxserver/server.py",
-					"settings":
-					{
-						"buffer_size": 4711,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								496,
-								496
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "userutils.py",
-					"settings":
-					{
-						"buffer_size": 517,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13,
-								13
-							]
-						],
-						"settings":
-						{
-							"auto_name": "usermanagement",
-							"syntax": "Packages/Python 3/Python3.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/c/Projects/python/pytxserver/views/main.tpl",
-					"settings":
-					{
-						"buffer_size": 3110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								550,
-								550
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 253.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/login_form.html",
-					"settings":
-					{
-						"buffer_size": 714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								574,
-								574
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/c/Projects/python/pytxserver/requirements.txt",
-					"settings":
-					{
-						"buffer_size": 38,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								38,
-								38
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/c/Projects/python/pytxserver/public/css/doc.css",
-					"settings":
-					{
-						"buffer_size": 6833,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2122,
-								2122
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2668.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/c/Projects/python/pytxserver/databaseutils.py",
-					"settings":
-					{
-						"buffer_size": 3578,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2990,
-								2990
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python 3/Python3.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1436.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -759,6 +494,18 @@
 		"selected_items":
 		[
 			[
+				"doc",
+				"public/css/doc.css"
+			],
+			[
+				"user",
+				"userutils.py"
+			],
+			[
+				"gra",
+				"gravatarutils.py"
+			],
+			[
 				"users",
 				"dataset/users.json"
 			],
@@ -781,10 +528,6 @@
 			[
 				"games.",
 				"public/css/games.css"
-			],
-			[
-				"doc",
-				"public/css/doc.css"
 			],
 			[
 				"games.json",

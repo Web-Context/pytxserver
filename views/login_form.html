@@ -9,7 +9,12 @@
 		</ul>
 		<div class="form-action">
 			<input type="submit" class="default" id="login" name="login" value="Login" accesskey="L">
-			<input type="button" name="cancel" id="cancel" value="Cancel" accesskey="C">
+			<input type="button" class="cancel" name="cancel" id="cancel" value="Cancel" accesskey="C">
 		</div>
 	</form>
+	<script type="text/javascript">
+	$('.form #cancel').click(function(){
+		$('.form').hide();
+	});
+	</script>
 </div>

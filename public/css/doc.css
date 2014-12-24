@@ -37,7 +37,12 @@ aside{
 	background-color:#699;
 	border:1px solid #366 inset;
 }
-.form  input.default:hover{
+.form  input.cancel{
+	background-color:#996;
+	border:1px solid #663 inset;
+}
+.form  input[type=button]:hover,
+.form  input[type=submit]:hover{
 	text-shadow: 2px 2px 4px #000;
 }
 .form label{
@@ -92,7 +97,7 @@ aside{
 	position:absolute;
 	top:0px;
 	left:0px;
-	margin:30% 40%;
+	margin:300px 30%;
 	width:350px;
 	height:250px;
 	border:1px solid #000;

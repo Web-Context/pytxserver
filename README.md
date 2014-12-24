@@ -1,7 +1,7 @@
 
-# PyServer v1.1
+# PyTxServer v1.2
 
-[![Go and see build status](https://travis-ci.org/mcgivrer/pytxserver.svg?branch=master)](https://travis-ci.org/mcgivrer/pytxserver)
+[![Go and see build status](https://travis-ci.org/Web-Context/pytxserver.svg?branch=master)](https://travis-ci.org/mcgivrer/pytxserver)
 
 Created and updated on 14-DEC-2014 by [Frédéric Delorme](mailto:frederic.delorme@web-context.com)
 
@@ -9,7 +9,6 @@ Created and updated on 14-DEC-2014 by [Frédéric Delorme](mailto:frederic.delorme
 
 Our new web server rely on the bottle framework and the cherrypy http multi-threading server. for the data side, you will need a mongodb server.
 Data are initialized at startup.
-
 
 to be able to start the server.py :
 
@@ -92,7 +91,36 @@ Please, see the following project structure :
 
 ### 1.2 
 
-Rewrite the README.md file to add screenshot, and start adding user login support.
+Rewrite the README.md file to add screenshot, and start adding user login and user session support, thanks to the `beaker.middleware` and there `SessionMiddleware` component.
+
+    :::python
+    # Initialize session management.
+    session_opts = {
+        'session.type': 'file',
+        'session.cookie_expires': 300,
+        'session.data_dir': './sessions',
+        'session.auto': True
+    }
+    app = SessionMiddleware(bottle.app(), session_opts)
+
+then in the main code:
+
+    :::bash
+    def getUserFromSession():
+        """
+        Retrieve, if exist the user session. if not, return None.
+        """
+        session = bottle.request.environ.get('beaker.session')
+        if('user' in session ):
+            user = session['user']
+        else:
+            user = None
+        return user
+
+And add the needed form to log in a user :
+
+![The ne login screen](docs/images/screenshot-0005.jpg)
+_(5). The new login screen: 1. click, 2. Log username in._
 
 ### 1.1
 

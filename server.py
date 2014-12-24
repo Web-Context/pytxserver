@@ -17,8 +17,9 @@ textUtils = TextUtils()
 htmlUtils = HTMLUtils()
 userutils = UserUtils()
 
-db = DatabaseUtils()
-
+"""
+Initialize session management.
+"""
 session_opts = {
     'session.type': 'file',
     'session.cookie_expires': 300,
@@ -27,8 +28,10 @@ session_opts = {
 }
 app = SessionMiddleware(bottle.app(), session_opts)
 
-
 def getUserFromSession():
+	"""
+	Retrieve, if exist the user session. if not, return None.
+	"""
 	session = bottle.request.environ.get('beaker.session')
 	if('user' in session ):
 		user = session['user']
@@ -39,12 +42,18 @@ def getUserFromSession():
 
 @route("/clear/cache")
 def clearCache():
+	"""
+	Clear All html generated cached files from bottle.
+	"""
 	TEMPLATES.clear();
 
 # Show a specific public 
 # resource like css, js, jpg, png.
 @route('/public/<filepath:path>')
 def server_static(filepath):
+	"""
+	Server ststic files (images, css and javascript.)
+	"""
 	return static_file(filepath, root='public/')
 
 # Show a textile page
@@ -52,11 +61,14 @@ def server_static(filepath):
 @route('/page/<page:path>')
 @view('page')
 def index(page='index'):
+	"""
+	Serve textiles pages. 
+	"""
+	db = DatabaseUtils()
 	htmlUtils.presetHeader(request,response, LANG)
 	games     = db.findGames()
 	platforms = db.findPlatforms()
 	csspage   = "home"
-	user = getUserFromSession()
 
 	if(page != 'favicon.ico'):
 		mypage = fileUtils.readFile('pages/' + page + '.textile')
@@ -79,12 +91,15 @@ def index(page='index'):
 @route('/game/<gameId:path>')
 @view('game')
 def game(gameId):
+	"""
+	Serve a game file (retrieved from mongodb)
+	"""
 	htmlUtils.presetHeader(request,response, LANG)
+	db = DatabaseUtils()
 	games     = db.findGames()
 	platforms = db.findPlatforms()
 	game      = db.findGameById(gameId)
 	platform  = db.findPlatformByCode(game['platform'])
-	csspage      = "game"
 
 	if(games and platforms):
 		if(game):
@@ -96,7 +111,7 @@ def game(gameId):
 				version    	= VERSION,
 				language    = LANG,
 				user 		= getUserFromSession(),
-				csspage    	= csspage,
+				csspage    	= "game",
 				game       	= game,
 				games      	= games,
 				platforms  	= platforms,
@@ -111,8 +126,12 @@ def game(gameId):
 @route('/games/search/<title:path>')
 @view('search')
 def search(title):
+	"""
+	Search for games with title containing 'title'.
+	"""
 	htmlUtils.presetHeader(request,response, LANG)
 
+	db    = DatabaseUtils()
 	games = db.searchGameByTitle(title)		
 
 	if(games):
@@ -130,18 +149,21 @@ def search(title):
 @route('/games/<platformCode:path>')
 @view('games')
 def games(platformCode):
+	"""
+	Retrieve all games for a particular platform code.
+	"""
 	htmlUtils.presetHeader(request,response, LANG)
-	games = db.findGamesForPlatform(platformCode)		
+	db        = DatabaseUtils()
+	games     = db.findGamesForPlatform(platformCode)		
 	platforms = db.findPlatforms()
 	platform  = db.findPlatformByCode(platformCode)
-	csspage   = "game" 
 	
 	if(games and platforms):
 		return dict(
-			version    	= VERSION,
-			language    = LANG,
-			user 		= getUserFromSession(),
-			csspage    = csspage,
+			version    = VERSION,
+			language   = LANG,
+			user 	   = getUserFromSession(),
+			csspage    = "game",
 			games      = games,
 			platforms  = platforms,
 			platform   = platform,
@@ -152,7 +174,10 @@ def games(platformCode):
 #create a game.
 @route("/game", method='PUT')
 def create():
-	htmlUtils.presetHeader(request,response, LANG)
+	"""
+	Create a game 
+	"""
+	htmlUtils.presetHeader(request, response, LANG)
 	data = request.body.read()
 	if not data:
 		abort(400,"No data received")
@@ -166,20 +191,34 @@ def create():
 @route("/login", method="POST") 
 @view('index')
 def login(): 
+	"""
+	Login user with the external small utility.
+	"""
 	user = userutils.login(request)
 	redirect('/')
 
 # User login in JSON format.
 @route("/logout", method="GET") 
 def logout(): 
+	"""
+	Logout the logged user !
+	"""
 	session = bottle.request.environ.get('beaker.session')
 	session['user'] = None
 	session.save()
 	redirect('/')
 
+@route("/user/edit", method="POST")
+def useredit():
+	user=getUserFromSession();
+	user=dict(request.form)
+	print(user)
 
-# Start server and delegate to cherrypy
-# multi-threading http server.
+
+"""
+Start server and delegate to cherrypy
+multi-threading http server.
+"""
 bottle.run( 
 	 app=app,
 	 server='cherrypy', 
