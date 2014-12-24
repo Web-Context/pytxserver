@@ -1,6 +1,5 @@
 .settings
 .project
 .pydevproject
-__pycache__
-pytxserver.sublime-project
-pytxserver.sublime-workspace
+sessions/
+__pycache__/
